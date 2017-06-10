@@ -1,0 +1,13 @@
+<h4><%= notice %></h4>
+
+<h4><%= @message if @message %></h4>
+
+<h2><%= 'ADMIN' if @user.admin %></h2>
+
+Name: <%= @user.name %><br>
+Tickets: <%= @user.tickets %><br>
+Mood:  <%= @user.mood %><br>
+Height: <%= pluralize(@user.height, 'inch') %><br>
+
+<%= link_to 'Edit', edit_user_path(@user) %><br>
+<%= link_to 'See attractions', attractions_path %>
